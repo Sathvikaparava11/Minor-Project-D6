@@ -1,0 +1,66 @@
+{%include "aheader.html" %}
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:  #ff6699;
+  color: white;
+}
+</style>
+	<script language="javascript" type="text/javascript">
+
+function popitup(url) {
+	newwindow=window.open(url,'name','height=350,width=400');
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+</script>
+</head>
+
+
+  <br><br>  <br><br>
+<center> <h3 class="text-start"><u>DL Models Evaluations</u></h3></center>
+<br>
+<div class="row contact-rooo big-padding no-margin">
+        <div class="container">
+           <div class="row">
+
+
+
+          </div>
+
+        </div>
+      </div><br><br>
+   <table align="center">
+       <tr><th><u>CNN Model Evaluation:</u></th></tr>
+                <tr><td> <img src="{{ url_for('static',filename='cnn_accuracy.png')}}"  alt=""></center></td><td><img src="{{ url_for('static',filename='cnn_loss.png')}}"  alt=""></center></td></tr>
+
+       <tr><th><u>VGG16 Model Evaluation:</u></th></tr>
+                  <tr><td>  <img src="{{ url_for('static',filename='vgg16_accuracy.png')}}"  alt=""></center></td><td><img src="{{ url_for('static',filename='vgg16_loss.png')}}"  alt=""/></td></tr>
+
+
+       <tr><th><u>VGG19 Model Evaluation:</u></th></tr>
+                  <tr><td>  <img src="{{ url_for('static',filename='vgg19_accuracy.png')}}"  alt=""></center></td><td><img src="{{ url_for('static',filename='vgg19_loss.png')}}"  alt=""/></td></tr>
+
+
+
+                </table>
+<br><br><br><br><br><br>
+{%include "footer.html" %}
